@@ -1,0 +1,19 @@
+<h1>New Project</h1>
+
+<%= form_for @project do |f| %>
+
+<p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+  <% if @project.errors.any? %>
+    <span class="error">
+      ※<%= @project.errors.messages[:title][0] %>
+    </span>
+  <% end %>
+</p>
+
+<p>
+  <%= f.submit "Create" %>
+</p>
+
+<% end %>
