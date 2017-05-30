@@ -6,6 +6,7 @@
   <% @projects.each do |p| %>
   <li>
     <%= p.id %> : <%= link_to p.title, project_path(p.id) %>
+    <%= link_to "【Edit】", edit_project_path(p.id) %>
   </li>
   <% end %>
 </ul>
